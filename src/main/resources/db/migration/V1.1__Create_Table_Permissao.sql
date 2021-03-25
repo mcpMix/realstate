@@ -2,6 +2,9 @@ CREATE TABLE IF NOT EXISTS `permissao` (
   `id` INT(11) NOT NULL,
   `descricao` VARCHAR(255) NULL DEFAULT NULL,
   `nome` VARCHAR(255) NULL DEFAULT NULL,
+  `created_at` DATETIME NOT NULL,
+  `updated_at` DATETIME NOT NULL,
+  `version` INT(11) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;

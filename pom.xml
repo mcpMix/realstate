@@ -6,6 +6,7 @@
 	<modules>
 		<module>realstate-domain</module>
 		<module>realstate-repository</module>
+		<module>realstate-commons</module>
 	</modules>
 
 	<groupId>br.com.realstate</groupId>
@@ -80,6 +81,31 @@
 				<configuration>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.flywaydb</groupId>
+				<artifactId>flyway-maven-plugin</artifactId>
+				<version>4.0.3</version>
+				<configuration>
+					<url>jdbc:mysql://localhost:3306/realstate</url>
+					<user>root</user>
+					<password>root</password>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>mysql</groupId>
+						<artifactId>mysql-connector-java</artifactId>
+						<version>${mysql.version}</version>
+						<exclusions>
+							<exclusion>
+								<groupId>slf4j-api</groupId>
+								<artifactId>org.slf4j</artifactId>
+							</exclusion>
+						</exclusions>
+					</dependency>
+
+				</dependencies>
 			</plugin>
 
 		</plugins>
