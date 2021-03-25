@@ -1,4 +1,4 @@
-package br.com.realstate.domain;
+package br.com.realstate.domain.commons;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;

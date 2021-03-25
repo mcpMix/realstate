@@ -1,4 +1,4 @@
-package br.com.realstate.domain;
+package br.com.realstate.domain.commons;
 
 import br.com.realstate.commos.utils.TimeZones;
 import org.apache.commons.lang3.builder.ToStringBuilder;
